@@ -1,14 +1,14 @@
 {
   "name": "users",
   "version": "0.1.0",
-  "bin": {
-    "users": "bin/users.js"
-  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk-destroy": "cdk destroy --profile ${PROFILE} ${STACK}",
+    "cdk-deploy": "cdk deploy --profile ${PROFILE} ${STACK}",
+    "cdk-deploy-all": "cdk deploy --profile ${PROFILE} --all",
+    "cdk-bootstrap": "cdk bootstrap --profile ${PROFILE}"
   },
   "devDependencies": {
     "@types/jest": "^26.0.10",
