@@ -7,4 +7,4 @@ import { getStackProps } from './config/config';
 
 const app = new cdk.App();
 
-new CognitoStack(app, 'CognitoStack', getStackProps({}));
+new CognitoStack(app, 'Cognito', getStackProps({}));
