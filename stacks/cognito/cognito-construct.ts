@@ -39,7 +39,8 @@ export class CognitoConstruct extends Construct {
       userPool,
       authFlows: {
         adminUserPassword: true,
-        userPassword: true
+        userPassword: true,
+        userSrp: true
       },
       supportedIdentityProviders: [UserPoolClientIdentityProvider.COGNITO],
       readAttributes: new ClientAttributes().withStandardAttributes({ email: true, emailVerified: true }),
