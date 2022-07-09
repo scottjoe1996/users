@@ -47,10 +47,12 @@ export class CognitoConstruct extends Construct {
     });
 
     new CfnOutput(this, 'userPoolId', {
-      value: userPool.userPoolId
+      value: userPool.userPoolId,
+      exportName: 'userPoolId'
     });
     new CfnOutput(this, 'userPoolClientId', {
-      value: userPoolClient.userPoolClientId
+      value: userPoolClient.userPoolClientId,
+      exportName: 'userPoolClientId'
     });
   }
 }
